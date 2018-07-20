@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_window"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_change"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:background="@drawable/move_back"
+        android:gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:src="@drawable/ic_drag_handle_black_24dp"
+            android:tint="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/move_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <Spinner
+            android:id="@+id/spinner_lv"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_clear"
+            android:src="@drawable/ic_clear_black_24dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/img_down"
+            android:background="@android:color/white"
+            android:src="@drawable/ic_arrow_downward_black_24dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_logcat"
+        android:background="@color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+
+</LinearLayout>

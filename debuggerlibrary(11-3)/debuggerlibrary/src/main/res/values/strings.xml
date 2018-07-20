@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Debugger</string>
+    <string name="app_error">程序出错!</string>
+    <string name="crash_dialog_text">程序出问题了</string>
+    <string name="crash_dialog_title">错误报告</string>
+    <string name="crash_dialog_comment_prompt">请填写出现此问题的操作或给予我们的建议</string>
+    <string name="crash_dialog_ok_toast">错误报告已提交服务器</string>
+</resources>

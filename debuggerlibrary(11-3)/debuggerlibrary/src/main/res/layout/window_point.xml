@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_point_window"
+        android:clickable="true"
+        android:src="@drawable/ic_album_black_24dp"
+        android:tint="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

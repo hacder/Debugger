@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_file_browsing"
+    android:background="@android:color/darker_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ude.debugger.activity.filebrowsing.FileBrowsingActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_toolbar"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:src="@drawable/ic_search_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_more"
+                android:gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@drawable/ic_more_vert_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_below="@+id/ll_search_box"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_browsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_fail"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_fail"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/ll_search_box"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center_vertical"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search"
+            android:queryHint="请输入筛选的关键字"
+            android:layout_marginLeft="5dp"
+            android:iconifiedByDefault="false"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/bt_search"
+            android:text="搜索"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
